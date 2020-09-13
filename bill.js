@@ -15,7 +15,7 @@ var fs = require('fs') , filename = process.argv[2];
 var configFile = fs.readFileSync("config.json");
 var config = JSON.parse(configFile);
 var cookie = fs.readFileSync("amazonCookie.txt", 'UTF-8');
-// main()
+main()
 
 function main() {
     try {
