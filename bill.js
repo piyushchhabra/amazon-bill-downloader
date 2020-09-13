@@ -108,3 +108,5 @@ function download_bill_new(lines, current) {
 function getFileName(kNumber) {
     return path.join(config.folder, kNumber)+".pdf"
 }
+
+//console.log(require("os").userInfo())
