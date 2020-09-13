@@ -1,6 +1,4 @@
 const path = require('path');
-var os = require("os");
-uname = os.userInfo().username
 var Nightmare = require('nightmare'),
 
 order_page = "https://www.amazon.in/gp/css/order-history?ref_=nav_AccountFlyout_orders";
@@ -10,6 +8,8 @@ if (process.argv.length < 3 || !process.argv[2].endsWith(".csv")) {
     console.log('Usage: node bill.js' + ' <csv_file>');
     process.exit(1);
 }
+var os = require("os");
+uname = os.userInfo().username
 if (uname != 'piyush.chhabra') {
     console.log("Unauthorized Access. Please try again later")
     process.exit(1);
@@ -19,7 +19,7 @@ var fs = require('fs') , filename = process.argv[2];
 var configFile = fs.readFileSync("config.json");
 var config = JSON.parse(configFile);
 var cookie = fs.readFileSync("amazonCookie.txt", 'UTF-8');
-// main()
+main()
 
 function main() {
     try {
