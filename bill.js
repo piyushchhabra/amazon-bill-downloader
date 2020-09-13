@@ -13,7 +13,8 @@ if (process.argv.length < 3 || !process.argv[2].endsWith(".csv")) {
 if (uname != 'piyush.chhabra') {
     console.log("Unauthorized Access. Please try again later")
     process.exit(1);
-}
+} 
+console.log("user authorized to run the script")
 var fs = require('fs') , filename = process.argv[2];
 var configFile = fs.readFileSync("config.json");
 var config = JSON.parse(configFile);

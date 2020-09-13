@@ -1,0 +1,22 @@
+{
+  "name": "amazon-bill-downloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bill.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piyushchhabra/amazon-bill-downloader.git"
+  },
+  "author": "piyush.chhabra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piyushchhabra/amazon-bill-downloader/issues"
+  },
+  "homepage": "https://github.com/piyushchhabra/amazon-bill-downloader#readme",
+  "dependencies": {
+    "nightmare": "^3.0.2"
+  }
+}
