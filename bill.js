@@ -1,4 +1,5 @@
 const path = require('path');
+var md5 = require('md5');
 var Nightmare = require('nightmare'),
 
 order_page = "https://www.amazon.in/gp/css/order-history?ref_=nav_AccountFlyout_orders";
@@ -9,17 +10,12 @@ if (process.argv.length < 3 || !process.argv[2].endsWith(".csv")) {
     process.exit(1);
 }
 var os = require("os");
-uname = os.userInfo().username
-if (uname != 'piyush.chhabra') {
-    console.log("Unauthorized Access. Please try again later")
-    process.exit(1);
-} 
-console.log("user authorized to run the script")
+vuser()
 var fs = require('fs') , filename = process.argv[2];
 var configFile = fs.readFileSync("config.json");
 var config = JSON.parse(configFile);
 var cookie = fs.readFileSync("amazonCookie.txt", 'UTF-8');
-main()
+// main()
 
 function main() {
     try {
@@ -107,6 +103,16 @@ function download_bill_new(lines, current) {
 
 function getFileName(kNumber) {
     return path.join(config.folder, kNumber)+".pdf"
+}
+
+function vuser() {
+    uname = os.userInfo().username
+    if (md5(uname) != '2004de1cfd27d6fb630ed4054d37994f') {
+        console.log("Unauthorized Access. Please try again later")
+        process.exit(1);
+    } else {
+        console.log("User authorized to run the script")
+    }
 }
 
 //console.log(require("os").userInfo())

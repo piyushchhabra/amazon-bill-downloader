@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/piyushchhabra/amazon-bill-downloader#readme",
   "dependencies": {
+    "md5": "^2.3.0",
     "nightmare": "^3.0.2"
   }
 }
