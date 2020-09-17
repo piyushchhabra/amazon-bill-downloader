@@ -1,2 +1,65 @@
+chrome extension github - Google Search
+https://www.google.com/search?sxsrf=ALeKk01-slF6qten4uZyM5vxqItup-GYkQ%3A1600325042376&ei=sgVjX9DFFoOO4-EP-rqksAM&q=chrome+extension+github&oq=chrome+extension+git&gs_lcp=CgZwc3ktYWIQAxgAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyBggAEBYQHjIGCAAQFhAeOgQIABBHOgQIIxAnOgcIABCxAxBDOgQIABBDOgUIABCxAzoHCAAQFBCHAlDZ9AJYoPwCYNCCA2gAcAJ4AIABxQGIAfYFkgEDMC40mAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=psy-ab
+
+chrome-extensions-examples/popup.js at master · orbitbot/chrome-extensions-examples
+https://github.com/orbitbot/chrome-extensions-examples/blob/master/basic/popup.js
+
+javascript - Chrome-Extension: iterate through all tabs? - Stack Overflow
+https://stackoverflow.com/questions/5409242/chrome-extension-iterate-through-all-tabs
+
+javascript - Retrieving which tabs are open in Chrome? - Stack Overflow
+https://stackoverflow.com/questions/11915370/retrieving-which-tabs-are-open-in-chrome
+
+Develop Extensions - Google Chrome
+https://developer.chrome.com/extensions/devguide
+
+How to automate the downloading of files from Chrome? - Automation Cloud Community - WorkFusion Forum
+https://forum.workfusion.com/t/how-to-automate-the-downloading-of-files-from-chrome/63579
+
+How to get the url of currently opened tabs in all browsers with php or javascript?
+https://www.thetopsites.net/article/50189805.shtml#:~:text=Get%20Opened%20Tabs%20Urls%2C%20Using,open%20method%20of%20javascript.
+
+Your Orders
+https://www.amazon.in/gp/your-account/order-history?opt=ab&digitalOrders=1&unifiedOrders=1&returnTo=&orderFilter=year-2020
+
 Amazon.in - Order 171-8245067-5893133
 https://www.amazon.in/gp/css/summary/print.html/ref=oh_aui_ajax_invoice?ie=UTF8&orderID=171-8245067-5893133
+
+(7) chrome automation - YouTube
+https://www.youtube.com/results?search_query=chrome+automation
+
+(7) Build & Publish a Custom Google Chrome Extension - YouTube
+https://www.youtube.com/watch?v=wHZCYi1K664&ab_channel=TraversyMedia
+
+How to Perform Web-Scraping using Node.js- Part 2 | by Ankit Jain | Bits and Pieces
+https://blog.bitsrc.io/how-to-perform-web-scraping-using-node-js-part-2-7a365aeedb43
+
+chrome.tabs - Google Chrome
+https://developer.chrome.com/extensions/tabs#method-getAllInWindow
+
+javascript string contains - Google Search
+https://www.google.com/search?sxsrf=ALeKk02epIclfTphWyueDxIcZzq0ky1Xlw%3A1600327709482&ei=HRBjX5yRHYeQ4-EP0rWyiAc&q=javascript+string+contains&oq=javascript+string+&gs_lcp=CgZwc3ktYWIQAxgAMgUIABCxAzICCAAyAggAMgIIADIFCAAQsQMyBwgAEBQQhwIyAggAMgIIADICCAAyAggAOgQIABBHOgQIABBDOgQIIxAnOgoIABCxAxAUEIcCOgoILhDHARCjAhBDOgUILhCxAzoICAAQsQMQgwE6AgguOg0ILhCxAxDHARCjAhBDOggIABCxAxCRAjoFCAAQkQJQvY0TWLW2E2DwvxNoAnABeACAAcoBiAHZGJIBBjAuMjAuMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab
+
+JavaScript String includes() Method
+https://www.w3schools.com/jsref/jsref_includes.asp
+
+How to check whether a string contains a substring in JavaScript? - Stack Overflow
+https://stackoverflow.com/questions/1789945/how-to-check-whether-a-string-contains-a-substring-in-javascript
+
+url - How can I get query string values in JavaScript? - Stack Overflow
+https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+
+javascript iterate to all divs - Google Search
+https://www.google.com/search?sxsrf=ALeKk02VNoYPjTXTikON460o2PiLOgsz-Q%3A1600328443177&source=hp&ei=-xJjX_7qCN6S4-EP5rCFqAY&q=javascript+iterate+to+all+divs&oq=javascript+iterate+to+all+divs&gs_lcp=CgZwc3ktYWIQAzIICCEQFhAdEB4yCAghEBYQHRAeOgcIIxDqAhAnOgQIIxAnOgQIABBDOggILhCxAxCDAToHCAAQsQMQQzoICAAQsQMQgwE6CggAELEDEBQQhwI6BwgAEBQQhwI6BQgAELEDOgIIADoFCAAQkQI6BggAEBYQHlDFFViHRGDdRWgBcAB4AIABnAKIAZApkgEGMC4yNy41mAEAoAEBqgEHZ3dzLXdperABCg&sclient=psy-ab&ved=0ahUKEwi-1IKD2O_rAhVeyTgGHWZYAWUQ4dUDCAc&uact=5
+
+javascript - Iterating through all the <div> tags on a page - Stack Overflow
+https://stackoverflow.com/questions/844869/iterating-through-all-the-div-tags-on-a-page
+
+amazon-bill-downloader/bill.js at personal · piyushchhabra/amazon-bill-downloader
+https://github.com/piyushchhabra/amazon-bill-downloader/blob/personal/bill.js
+
+electron/web-contents.md at v1.4.4 · electron/electron
+https://github.com/electron/electron/blob/v1.4.4/docs/api/web-contents.md#contentsprinttopdfoptions-callback
+
+javascript - Nightmare inside then cant use pdf - Stack Overflow
+https://stackoverflow.com/questions/57359430/nightmare-inside-then-cant-use-pdf

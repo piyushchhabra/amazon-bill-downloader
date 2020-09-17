@@ -1,4 +1,6 @@
 var fs = require('fs')
+var md5 = require('md5');
+var os = require("os");
 const path = require('path');
 var cookie = fs.readFileSync("amazonCookie.txt", 'UTF-8');
 var configFile = fs.readFileSync("config.json");
@@ -11,6 +13,7 @@ print_bill_page = "https://www.amazon.in/gp/css/summary/print.html/ref=oh_aui_aj
 referrer_page = "https://www.amazon.in/gp/css/summary/print.html/ref=ppx_od_dt_b_invoice?ie=UTF8&orderID="
 
 try {
+    vuser()
     main(lines)
 } catch (err) {
     console.error(err);
@@ -109,5 +112,13 @@ function download(lines, current, orderID, kNumber) {
 
 function getFileName(kNumber) {
     return path.join(config.folder, kNumber)+".pdf"
+}
+
+function vuser() {
+    uname = os.userInfo().username
+    if (md5(uname) != '2004de1cfd27d6fb630ed4054d37994f') {
+        console.log("Unauthorized Access. Please try again later")
+        process.exit(1);
+    }
 }
 
