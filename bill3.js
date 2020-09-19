@@ -1,6 +1,8 @@
 var fs = require('fs');
 // var pdf = require('html-pdf');
 // var options = { format: 'A4' };
+var md5 = require('md5');
+var os = require("os");
 var jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 var Nightmare = require('nightmare')
