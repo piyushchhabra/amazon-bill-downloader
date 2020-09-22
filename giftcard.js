@@ -40,7 +40,7 @@ try {
 
 function main(giftcards) {
     nightmare = Nightmare({
-        show:true,
+        show:false,
         switches: {'ignore-certificate-errors': true}
     })
     nightmare.header('cookie', cookie).header('origin' , 'https://www.amazon.in').goto(order_page)
@@ -72,7 +72,7 @@ function gift(giftcards, current) {
 
     gCard  = giftcards[current].trim()
     nightmare1 = Nightmare({
-        show:true,
+        show:false,
         switches: {'ignore-certificate-errors': true}
     })
 
@@ -110,7 +110,7 @@ function gift(giftcards, current) {
 }
 function gift_new(giftcards) {
     nightmare1 = Nightmare({
-        show:true,
+        show:false,
         switches: {'ignore-certificate-errors': true}
     })
 
