@@ -104,8 +104,22 @@ function gift(giftcards, current) {
         return gift(giftcards, current + 1)
     })
     .catch(error => {
-        console.log("error while opening gift card page")
-        console.log(error)
+        console.log("error while opening gift card page. your session might be expired. Please update cookie file")
+        if (error['code']) {
+            console.log("errorCode="+ error['code'])
+            if (error['code'] == -1) {
+                console.log("Invalid session id")
+                process.exit(0)
+            }
+        } else if (error['details'] && error['details'] == 'ERR_CONNECTION_RESET') {
+            console.log("Invalid session id")
+            process.exit(0)
+        } else {
+            for (let card in error) {
+                console.log(card)
+            }
+            console.error(error);
+        }
     })
 }
 function gift_new(giftcards) {
