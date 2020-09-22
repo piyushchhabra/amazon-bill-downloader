@@ -25,14 +25,22 @@ Nightmare.action("clickIfExists", function(selector,done) {
 try {
     var allCards = getCards()
     vuser()
-    main(allCards)
+    // gift(allCards, 0)
+    gift_new(allCards)
 } catch (err) {
-    console.error(err);
+    if (err['details'] && err['details'] == 'ERR_CONNECTION_RESET') {
+        console.log("Invalid session id")
+    } else {
+        for (let card in err) {
+            console.log(card)
+        }
+        console.error(err);
+    }
 }
 
 function main(giftcards) {
     nightmare = Nightmare({
-        show:false,
+        show:true,
         switches: {'ignore-certificate-errors': true}
     })
     nightmare.header('cookie', cookie).header('origin' , 'https://www.amazon.in').goto(order_page)
@@ -44,6 +52,7 @@ function main(giftcards) {
             if (url === order_page) {
                 console.log("Session Verified...")
                 return gift(giftcards, 0)
+                // return gift_new(giftcards)
             } else {
                 console.log("Your session is expired. Please update your session in amazonCookie.txt file")
                 process.exit(1);
@@ -63,7 +72,7 @@ function gift(giftcards, current) {
 
     gCard  = giftcards[current].trim()
     nightmare1 = Nightmare({
-        show:false,
+        show:true,
         switches: {'ignore-certificate-errors': true}
     })
 
@@ -99,6 +108,71 @@ function gift(giftcards, current) {
         console.log(error)
     })
 }
+function gift_new(giftcards) {
+    nightmare1 = Nightmare({
+        show:true,
+        switches: {'ignore-certificate-errors': true}
+    })
+
+    return nightmare1
+    .header('cookie', cookie)
+    .header('origin' , 'https://www.amazon.in')
+    .goto(url)
+    .wait(2000)
+    .clickIfExists(".a-expander-header")
+    .evaluate((giftcards, idealPage) => {
+        var results  = {}
+        
+        for(var k = 0; k < giftcards.length; k++) {
+            currentPage = window.location.href
+            if (currentPage != idealPage) {
+                results['err'] = "Session has expired. Please update the session"
+                break;
+            }
+            gCard  = giftcards[k].trim()
+            var allInputs = document.getElementsByTagName("input")
+            var i = 0
+            for(var i = 0; i < allInputs.length; i++){
+                 if (allInputs[i].placeholder == "Enter Code") {
+                    allInputs[i].value = gCard
+                    break;
+                 }
+            }
+            allInputs[i+1].click()
+            results[gCard] = document.querySelector('body').innerHTML
+        }
+        return results
+    }, giftcards, url)
+    .end()
+    .then(results => {
+        if(results['err']) {
+            console.log(results['err'])
+        } else {
+            for (let card in results) {
+                print_results(card,results[card])
+            }
+            console.log("---------------**Giftcard verification completed**---------------")
+        }
+    })
+    .catch(error => {
+        console.log("error while opening gift card page. your session might be expired. Please update cookie file")
+        if (error['code']) {
+            console.log("errorCode="+ error['code'])
+            if (error['code'] == -1) {
+                console.log("Invalid session id")
+                process.exit(0)
+            }
+        } else if (error['details'] && error['details'] == 'ERR_CONNECTION_RESET') {
+            console.log("Invalid session id")
+            process.exit(0)
+        } else {
+            for (let card in error) {
+                console.log(card)
+            }
+            console.error(error);
+        }
+    })
+}
 
 function getCards() {
     var tabs = fs.readFileSync("giftcards.txt", 'UTF-8');
@@ -106,6 +180,13 @@ function getCards() {
     return lines
 }
 
+function print_results(gCard, html) {
+    if (html.includes('Gift card cannot be used')) {
+        console.log(gCard + " is INVALID/Already Used")
+    } else {
+        console.log(gCard + " is VALID")
+    }
+}
 
 function vuser() {
     uname = os.userInfo().username
